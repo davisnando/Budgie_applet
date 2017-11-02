@@ -1,0 +1,9 @@
+[Plugin]
+Loader=python3
+Module=etcdesktop
+Name=Etc desktop applet
+Description=ETC applet
+Authors=Nando davis
+Copyright=Copyright © 2017 Nando Davis
+Website=https://solus-project.com
+Icon=user-desktop-symbolic
