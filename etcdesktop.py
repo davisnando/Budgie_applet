@@ -137,9 +137,11 @@ class myThread (threading.Thread):
                 time.sleep(self.user_data['timeout'])
 
     def getData(self):
-        response = requests.request("GET", 'https://api.kraken.com/0/public/Ticker?pair=' + self.user_data['pair'])
         try:
+            response = requests.request("GET", 'https://api.kraken.com/0/public/Ticker?pair=' + self.user_data['pair'])
             json_obj = json.loads(response.text)
             return json_obj
         except ValueError:
             return False
+        except Exception:
+             return False
